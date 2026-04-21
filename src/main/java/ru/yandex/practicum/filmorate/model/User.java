@@ -6,15 +6,16 @@ import lombok.Data;
 import java.time.LocalDate;
 
 @Data
-public class Film {
+public class User {
     private Long id;
     @NotBlank
-    String name;
+    @Email
+    String email;
     @NotBlank
-    @Size(max = 200)
-    String description;
+    @Pattern(regexp = "\\S+")
+    String login;
+    String name;
     @NotNull
-    LocalDate releaseDate;
-    @Positive
-    int duration;
+    @PastOrPresent
+    LocalDate birthday;
 }
