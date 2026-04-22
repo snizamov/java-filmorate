@@ -63,7 +63,7 @@ public class FilmController {
     }
 
     private void checkReleaseDateOfFilm(Film film) {
-        if (film.getReleaseDate().isBefore(LocalDate.of(1895, 12, 28))) {
+        if (film.getReleaseDate().isBefore(FILM_BIRTHDAY)) {
             log.warn("Дата релиза раньше допустимой (28.12.1895)");
             throw new ValidationException("Дата релиза не может быть раньше 28 декабря 1895 года");
         }
