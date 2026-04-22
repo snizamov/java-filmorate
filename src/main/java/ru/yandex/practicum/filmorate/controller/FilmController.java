@@ -21,6 +21,7 @@ public class FilmController {
 
     @GetMapping
     public Collection<Film> getAllFilms() {
+        log.info("Получение списка фильмов");
         return films.values();
     }
 
