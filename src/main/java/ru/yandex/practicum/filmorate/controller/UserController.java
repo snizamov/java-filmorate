@@ -19,6 +19,7 @@ public class UserController {
 
     @GetMapping
     public Collection<User> getUsersList() {
+        log.info("Получение списка пользователей");
         return users.values();
     }
 
