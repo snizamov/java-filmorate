@@ -17,6 +17,7 @@ import java.util.Map;
 @RequestMapping("/films")
 public class FilmController {
     private Map<Long, Film> films = new HashMap<>();
+    private static final LocalDate FILM_BIRTHDAY = LocalDate.of(1895, 12, 28);
 
     @GetMapping
     public Collection<Film> getAllFilms() {
